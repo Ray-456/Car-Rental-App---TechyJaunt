@@ -1,0 +1,134 @@
+{
+  "info": {
+    "name": "TechyJaunt API",
+    "_postman_id": "a1b2c3d4-techyjaunt-v3",
+    "description": "Basic requests for TechyJaunt Auth Full v3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Car",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"brand\": \"Toyota\", \"model\": \"Corolla\", \"year\": 2022, \"pricePerDay\": 5000}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/cars",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cars"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Cars",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/cars",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "cars"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create User (register placeholder)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Test User\", \"email\": \"test@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/register",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Rental",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"carId\": \"<replace_with_car_id>\", \"userId\": \"<replace_with_user_id>\", \"startDate\": \"2025-01-01\", \"endDate\": \"2025-01-07\", \"amount\": 35000}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/rentals",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "rentals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Initiate Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"rentalId\": \"<replace_with_rental_id>\", \"amount\": 35000, \"email\": \"customer@example.com\", \"phone\": \"08012345678\", \"name\": \"John Doe\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/payments/initiate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "payments",
+            "initiate"
+          ]
+        }
+      }
+    }
+  ],
+  "event": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "techyjaunt-auth-full",
+  "version": "1.0.2",
+  "description": "TechyJaunt-Auth extended with Cars, Rentals and Flutterwave payments (v3)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "flutterwave-node-v3": "^1.0.9",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0",
+    "bcrypt": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
